@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %} Form submission {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        Fill out this fancy form!
+    </div>
+    <div class="col">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }}: {{ form.name() }}
+            {{ form.age.label }}: {{ form.age() }}
+            {{ form.submit()}}
+
+        </form>
+        <hr>
+    </div>
+    <!-- {{ wtf.quick_form(form)}} -->
+</div>
+{% endblock %}
